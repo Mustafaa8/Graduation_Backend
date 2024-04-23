@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    size: 25px;
+    color: #112234;
+}
+form {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+}
+#sub {
+    align-content: center;
+}
