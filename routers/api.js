@@ -18,6 +18,19 @@ router.get('/first',async(req,res)=>{
 )
     res.json(firstpoint)
 })
+router.post('/',async (req,res)=>{
+    const newpoint = await prisma.points.create({
+    data:{
+        startR:parseInt(req.body['start row']),
+        startC:parseInt(req.body['start column']),
+        endR:parseInt(req.body['end row']),
+        endC:parseInt(req.body['end column'])
+    },
+})
+});
+router.delete('/:id/delete',async(req,res)=>{
+    const id = req.params
+    let deletion = await prisma.points.delete({where:{id:id}})
+})
 
-
-module.exports = router
+module.exports = router;

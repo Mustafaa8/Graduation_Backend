@@ -7,24 +7,24 @@ const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 app.set('views','./views')
 app.set('view engine','ejs')
-app.disable('X-Powered-By');
-app.get('/',(req,res,next)=>{
-    res.render('index.ejs')
+app.disable('x-powered-by');
+app.get('/',async (req,res,next)=>{
+    allpoints = await prisma.points.findMany({})
+    res.render('index.ejs',)
 })
 
 app.use('/records',router)
-app.post('/records',async (req,res,next)=>{
-    // await prisma.points.deleteMany({})
-    const newpoint = await prisma.points.create({data:{
-        startR:parseInt(req.body['start row']),
-        startC:parseInt(req.body['start column']),
-        endR:parseInt(req.body['end row']),
-        endC:parseInt(req.body['end column'])
+app.post('/',async (req,res,next)=>{
+    allpoints = await prisma.points.findMany({})
+    const newpoint = await prisma.points.create({
+    data:{
+        startR:parseInt(req.body['startR']),
+        startC:parseInt(req.body['startC']),
+        endR:parseInt(req.body['endR']),
+        endC:parseInt(req.body['endC'])
     },
 })
-    res.json(await prisma.points.findMany({}))
-    
-
+    res.render("index.ejs",)
 })
 app.use((req,res)=>{
     res.status(404).render('404.ejs')
