@@ -10,6 +10,12 @@ router.get('/',async (req,res)=>{
 
 router.get('/first',async(req,res)=>{
     firstpoint = await prisma.points.findFirst({})
+    await prisma.points.delete({
+        where:{
+            id:firstpoint['id'],
+        },
+    },
+)
     res.json(firstpoint)
 })
 
