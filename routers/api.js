@@ -8,7 +8,8 @@ router.get('/',async (req,res)=>{
     res.json(allPoints)
 })
 
-router.get('/first',async(req,res)=>{
+router.get('/first',async(req,res,next)=>{
+    try {
     firstpoint = await prisma.points.findFirst({})
     await prisma.points.delete({
         where:{
@@ -17,6 +18,10 @@ router.get('/first',async(req,res)=>{
     },
 )
     res.json(firstpoint)
+} catch(err){
+    console.log(res.status);
+    next(err)
+}
 })
 router.post('/',async (req,res)=>{
     const newpoint = await prisma.points.create({

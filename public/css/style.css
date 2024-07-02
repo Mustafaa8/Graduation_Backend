@@ -1,13 +1,125 @@
-h1 {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('warehouse-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+    border-bottom: 2px solid #007bff;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
     text-align: center;
-    size: 25px;
-    color: #112234;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
 }
-form {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 10px;
+
+.main .content {
+    max-width: 800px;
 }
-#sub {
-    align-content: center;
+
+.main h2 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.main span {
+    font-size: 48px;
+    color: #333;
+}
+
+.main-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.main-btn:hover {
+    background-color: #0056b3;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #007bff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+    
+}
+
+.footer .social-icons a:hover {
+    color: #f0f0f0;
 }

@@ -1,13 +1,89 @@
-h1 {
-    text-align: center;
-    padding: 250px 10px 2px 10px;
-    color:white;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('warehouse-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
 }
-h3 {
-    text-align: center;
-    color:white;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+    border-bottom: 2px solid #007bff;
 }
-div {
-    height:400px;
-    background-color: #0c677e;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.main .content {
+    max-width: 800px;
+}
+
+.main h2 {
+    font-size: 100px;
+    color: #007bff;
+    margin-bottom: 40px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #f0f0f0;
 }
